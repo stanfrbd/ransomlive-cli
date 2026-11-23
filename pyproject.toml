@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ransomlive-cli"
+version = "0.1.0"
+description = "A human- and machine-friendly CLI for the Ransomware.live Pro REST API"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "httpx>=0.28,<1",
+    "idna>=3,<4",
+    "python-dotenv>=1.1,<2",
+    "rich>=14,<16",
+    "tldextract>=5.1,<6",
+]
+
+[project.scripts]
+ransomlive = "ransomlive.cli:main"
+
+[project.urls]
+Repository = "https://github.com/stanfrbd/ransomlive-cli"
+Documentation = "https://api-pro.ransomware.live/docs"
+
+[dependency-groups]
+dev = ["pre-commit>=4,<5", "pytest>=8,<10", "ruff==0.15.5"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ransomlive"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/README.md", "/LICENSE", "/pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
