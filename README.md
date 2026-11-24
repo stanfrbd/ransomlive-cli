@@ -6,17 +6,28 @@ Victim listings are intelligence leads, not confirmation of incidents.
 
 ## Install
 
-With [uv](https://docs.astral.sh/uv/), run without installing globally:
+Install from PyPI in an activated Python virtual environment:
 
 ```sh
-uvx --from git+https://github.com/stanfrbd/ransomlive-cli ransomlive --help
+pip install ransomlive-cli
 ```
 
-Or install the `ransomlive` command:
+Or install the `ransomlive` command with [uv](https://docs.astral.sh/uv/):
+
+```sh
+uv tool install ransomlive-cli
+```
+
+To run without installing globally:
+
+```sh
+uvx --from ransomlive-cli ransomlive --help
+```
+
+To install from GitHub or a local checkout instead:
 
 ```sh
 uv tool install git+https://github.com/stanfrbd/ransomlive-cli
-# Or in an activated Python virtual environment:
 pip install git+https://github.com/stanfrbd/ransomlive-cli
 # From a local checkout:
 pip install -e .
