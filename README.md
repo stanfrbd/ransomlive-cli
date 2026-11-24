@@ -1,7 +1,7 @@
 # ransomlive-cli
 
-A Python 3.11+ CLI for the [Ransomware.live Pro REST API](https://api-pro.ransomware.live/docs).
-Source: [Ransomware.live](https://ransomware.live), created by **Julien MOUSQUETON**.
+A Python 3.11+ CLI for the [Ransomware.Live Pro REST API](https://api-pro.ransomware.live/docs).
+Source: [Ransomware.Live](https://ransomware.live), created by [**Julien MOUSQUETON**](https://github.com/JMousqueton).
 Victim listings are intelligence leads, not confirmation of incidents.
 
 ## Install
@@ -168,5 +168,7 @@ uv run python scripts/smoke_live.py
 
 It attempts each documented GET route once, uses returned identifiers for dependent
 checks, prints only pass/fail/skip labels, and stops on rate limiting. It is not run in CI.
+
+A huge thank you to [**Julien MOUSQUETON**](https://github.com/JMousqueton) for developing Ransomware.Live for free.
 
 The CLI code is [MIT licensed](LICENSE); that license does not apply to third-party API data.
